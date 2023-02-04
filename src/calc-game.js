@@ -49,4 +49,4 @@ function gameCalc(){
     console.log('Hi ' + `${userName}` + '!');
     game(userName);
 }
-export default gameCalc
+export default gameCalc;

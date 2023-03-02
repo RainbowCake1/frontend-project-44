@@ -1,8 +1,5 @@
-import readlineSync from 'readline-sync';
-
-function randNum(max) {
-  return Math.floor(Math.random() * max);
-}
+import play from "./logic.js";
+import randNum from "./randomnumbers.js";
 
 function randOperation() {
  const rnd = Math.round(Math.random() * 2 + 1);
@@ -23,30 +20,14 @@ function calc(num1,num2,oper){
   }
 }
 
-function game(userName) {
-  console.log('What is the result of the expression?');
-  for (let i = 0; i < 3; i++ ) {
-    const num1 = randNum(16);
-    const num2 = randNum(16);
-    const opr = randOperation()
-    console.log(`'Question:'${num1} ${opr} ${num2}`);
-   const rightAnswer = calc(num1,num2,opr)
-    const ques = readlineSync.question('You answer:');
+const task = 'What is the result of the expression?';
 
-    if (ques == rightAnswer) {
-      console.log('Correct!');
-    } else {
-    console.log(`"${ques}" is wrong anser ;(. Correct answer was ${rightAnswer}. \nLet\'s try again, ${userName}`);
-     return
-    }
+const game = () => {
+  const num1 = randNum(16);
+  const num2 = randNum(16);
+  const opr = randOperation();
+const question = `${num1} ${opr} ${num2}`;
+  const answer = calc(num1,num2,opr)
+  return [question,answer]
 }
-console.log(`Congratulations, ${userName}!`)
-}
-
-function gameCalc(){
-  console.log('Welcome to the Brain Games!');
-    const userName = readlineSync.question('May I have your name? ');
-    console.log('Hi ' + `${userName}` + '!');
-    game(userName);
-}
-export default gameCalc;
+export default play(task,game)

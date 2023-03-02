@@ -1,34 +1,15 @@
-import readlineSync from 'readline-sync';
+import play from "./logic.js";
+import randNum from "./randomnumbers.js";
 
-function getRandomNum(max) {
-    return Math.floor(Math.random() * max);
-  }
-  function game(userName) {
-console.log('Answer "yes" if the number is even, otherwise answer "no".');
-for (let i = 0; i < 3; i++ ) {
-const num = getRandomNum(16);
-console.log(`'Question:'${num}`);
-const ques = readlineSync.question('You answer:');
+const isEven = (number) => (number % 2 === 0) ? 'yes' : 'no';
 
-const checkone = (num % 2 === 0) && (ques === 'yes');
-const checktwo = (num % 2 !== 0) && (ques === 'no');
+const task = 'Answer "yes" if given number is even. Otherwise answer "no".';
 
-if (checkone || checktwo ) {
-  console.log('Correct!');
-} else {
-  const warn = (ques === 'yes' ? 'no' : 'yes');
-  const error = `"${ques}" is wrong anser ;(. Correct answer was '${warn}'. \nLet\'s try again, ${userName}`;
-  console.log(error)
-  return;
-}
-  }
-  console.log(`Congratulations, ${userName}!`);
-}
-  
-  function evenGame() {
-console.log('Welcome to the Brain Games!');
-    const userName = readlineSync.question('May I have your name? ');
-    console.log('Hi ' + `${userName}` + '!');
-    game(userName);
-  }
-  export default evenGame;
+const game = () => {
+    const number = randNum(15);
+    const answer = isEven(number);
+    return [number, answer];
+};
+
+const st = () => play(task,game)
+export default st

@@ -12,7 +12,7 @@ function randOperation() {
  }
 }
 
-function calc(num1,num2,oper){
+function calc(num1,oper,num2){
   switch(oper) {
     case '-': return num1 - num2;
     case '+': return num1 + num2;
@@ -25,9 +25,11 @@ const task = 'What is the result of the expression?';
 const game = () => {
   const num1 = randNum(16);
   const num2 = randNum(16);
-  const opr = randOperation();
-const question = `${num1} ${opr} ${num2}`;
-  const answer = calc(num1,num2,opr)
+  const oper = randOperation();
+const question = `${num1} ${oper} ${num2}`;
+  const answer = calc(num1,num2,oper)
   return [question,answer]
 }
-export default play(task,game)
+const result = () => play(task,game);
+
+export default result

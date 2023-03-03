@@ -27,7 +27,7 @@ const game = () => {
   const num2 = randNum(16);
   const oper = randOperation();
 const question = `${num1} ${oper} ${num2}`;
-  const answer = calc(num1,num2,oper)
+  const answer = calc(num1,oper,num2)
   return [question,answer]
 }
 const result = () => play(task,game);

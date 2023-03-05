@@ -1,26 +1,36 @@
-import readlineSync from 'readline-sync';
+import play from "./logic.js";
+import randNum from "./randomnumbers.js"; 
 
-function randNum(max) {
-    return Math.floor(Math.random() * max);
+const task = 'What number is missing in the progression?'
+
+function game(){
+  let startNum = randNum(5);
+  const step = 2;
+  const maxLength = 6 + randNum(4);
+  const temp = startNum
+
+  const array = () =>{
+    const numArr = [];
+    for(let minNum = 0; minNum <= maxLength;minNum += 1){
+      numArr.push(startNum);
+      startNum += step
+    }
+    return numArr
   }
- 
-  function game() {
-  const arr = [];
-  const num = 1 + randNum(8);
-  const step = 3;
-  const lenght = 10;
-   const makeArr = () => {
-for(let minNum = 0; minNum <= lenght; minNum += 1) {
-  arr.push(num);
-  num += step;
-  return arr;
+
+
+const result = array();
+const take = randNum(array().length - 1);
+
+    const question = () => {
+        result[take] = '..';
+        return result.join(' ');
+    };
+
+    const answer = () => (temp + (step * take));
+
+    return [question(), answer()];
 }
-}
-   }
-  function gameProgress(){
-    console.log('Welcome to the Brain Games!');
-    const userName = readlineSync.question('May I have your name? ');
-    console.log('Hi ' + `${userName}` + '!');
-    game(userName)
-  }
-  export default gameProgress
+  const finn = play(task,game)
+export default finn
+

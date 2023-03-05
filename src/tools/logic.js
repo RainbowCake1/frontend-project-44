@@ -9,7 +9,7 @@ function play(task,game){
 
     for (let i = 0; i < round; i++ ){
 const [question,answer] = game();
-console.log(`'Question:'${question}`)
+console.log(`Question: ${question}`)
 const userAnswer = readlineSync.question('Your answer: ');
 if (userAnswer !== String(answer)) {
   console.log(`'${userAnswer}' is wrong answer;(. Correct answer was '${answer}'`);

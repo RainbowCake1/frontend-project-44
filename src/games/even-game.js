@@ -7,7 +7,7 @@ const task = 'Answer "yes" if given number is even. Otherwise answer "no".';
 
 const game = () => {
     const number = randNum(15);
-    const answer = isEven(number);
+    const answer = isEven( number);
     return [number, answer];
 };
 

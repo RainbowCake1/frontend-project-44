@@ -1,5 +1,5 @@
 import play from "../tools/logic.js";
-import randNum from "../randomnumbers.js";
+import randNum from "../tools/randomnumbers.js";
 
 const isEven = (number) => (number % 2 === 0) ? 'yes' : 'no';
 

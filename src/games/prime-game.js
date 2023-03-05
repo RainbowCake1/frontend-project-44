@@ -1,9 +1,5 @@
 import play from "../tools/logic.js";
-
-function randomInter(min, max){
-    const rand = Math.random()*(max-min) + min
-    return Math.floor(rand)
-}
+import randomInter from "../tools/randint.js";
 
 const task = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 

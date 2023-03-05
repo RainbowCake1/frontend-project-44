@@ -1,5 +1,5 @@
 import play from "../tools/logic.js";
-import randNum from "../randomnumbers.js"; 
+import randNum from "../tools/randomnumbers.js"; 
 
 const task = 'Find the greatest common divisor of given numbers.'
 

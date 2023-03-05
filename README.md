@@ -1,3 +1,19 @@
+<p>Welcome to the Brain games!</p>
+
+<h1>Requirements</h1>
+<ul>
+<li>The game can only be played on Unix operation system</li>
+<li>Node.js</li>
+</ul>
+
+<h1>How to install</h1>
+<ul>
+<li>git clone this repository</li>
+<li>cd frontend-project-44</li>
+<li>make install</li>
+<li>You can play!</li>
+</ul>
+
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/RainbowCake1/frontend-project-44/workflows/hexlet-check/badge.svg)](https://github.com/RainbowCake1/frontend-project-44/actions)
 <a href="https://codeclimate.com/github/RainbowCake1/frontend-project-44/maintainability"><img src="https://api.codeclimate.com/v1/badges/eca07b988093c056a328/maintainability" /></a>

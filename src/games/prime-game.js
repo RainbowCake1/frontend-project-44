@@ -1,5 +1,5 @@
-import play from "../tools/logic.js";
-import randomInter from "../tools/randint.js";
+import play from '../tools/logic.js';
+import randomInter from '../tools/randint.js';
 
 const task = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 

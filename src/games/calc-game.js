@@ -1,6 +1,6 @@
-import play from "../tools/logic.js";
-import randNum from "../tools/randomnumbers.js";
-import randOperation from "../tools/randomoperation.js";
+import play from '../tools/logic.js';
+import randNum from '../tools/randomnumbers.js';
+import randOperation from '../tools/randomoperation.js';
 
 function calc(num1,oper,num2){
   switch(oper) {

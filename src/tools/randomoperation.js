@@ -7,5 +7,5 @@ function randOperation() {
     } else {
      return '*'
     }
-   }
-   export default randOperation
+   };
+   export default randOperation;

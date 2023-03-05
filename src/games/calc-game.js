@@ -1,5 +1,5 @@
-import play from "./logic.js";
-import randNum from "./randomnumbers.js";
+import play from "../tools/logic.js";
+import randNum from "../randomnumbers.js";
 
 function randOperation() {
  const rnd = Math.round(Math.random() * 2 + 1);

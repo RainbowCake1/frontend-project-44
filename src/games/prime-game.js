@@ -1,6 +1,6 @@
-import play from "./logic.js";
+import play from "../tools/logic.js";
 
-function randomNumber(min, max){
+function randomInter(min, max){
     const rand = Math.random()*(max-min) + min
     return Math.floor(rand)
 }
@@ -15,7 +15,7 @@ function prime(num) {
    }
 
 function game(){
-    const num = randomNumber(2,16);
+    const num = randomInter(2,16);
     const question = `${num}`;
     const answer = prime(num);
     return [question,answer]

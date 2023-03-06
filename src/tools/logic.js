@@ -4,10 +4,10 @@ function play(task,game){
   const round = 3 ;
   console.log('Welcome to the Brain Games!');
   const userName = readlineSync.question('May I have your name? ');
-  console.log('Hello, ' `${userName}` '!');
+  console.log(`Hello, ${userName}!`);
  console.log(task);
 
- for (let i = 0; i < round; i+=1 ){
+ for (let i = 0; i < round; i=+1 ){
 const [question,answer] = game();
 console.log(`Question: ${question}`);
 const userAnswer = readlineSync.question('Your answer: ');

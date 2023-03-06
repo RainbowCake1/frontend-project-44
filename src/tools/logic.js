@@ -7,7 +7,7 @@ function play(task,game){
   console.log(`Hello, ${userName}!`);
  console.log(task);
 
- for (let i = 0; i < round; i=+1 ){
+ for (let i = 0; i < round; i+=1 ){
 const [question,answer] = game();
 console.log(`Question: ${question}`);
 const userAnswer = readlineSync.question('Your answer: ');

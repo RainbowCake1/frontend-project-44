@@ -1,5 +1,5 @@
-function randNum(max) {
+function getRandNum(max) {
   return Math.floor(Math.random() * max);
 }
 
-export default randNum;
+export default getRandNum;

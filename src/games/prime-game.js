@@ -1,19 +1,19 @@
-import play from '../tools/logic.js';
+import play from '../index.js';
 import randomInter from '../tools/randint.js';
 
 const task = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-function prime(num) {
+function isPrime(num) {
   for (let i = 2; i < num; i += 1) {
-    if (num % i === 0) return 'no';
+    if (num % i === 0) return false;
   }
-  return 'yes';
+  return true;
 }
 
 function game() {
   const num = randomInter(2, 16);
   const question = `${num}`;
-  const answer = prime(num);
+  const answer = isPrime(num);
   return [question, answer];
 }
 export default play(task, game);

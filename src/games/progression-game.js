@@ -1,12 +1,12 @@
-import play from '../tools/logic.js';
-import randNum from '../tools/randomnumbers.js';
+import play from '../index.js';
+import getRandNum from '../tools/randomnumbers.js';
 
 const task = 'What number is missing in the progression?';
 
 function game() {
-  let startNum = randNum(5);
+  let startNum = getRandNum(5);
   const step = 2;
-  const maxLength = 6 + randNum(4);
+  const maxLength = 6 + getRandNum(4);
   const temp = startNum;
 
   const array = () => {
@@ -19,7 +19,7 @@ function game() {
   };
 
   const result = array();
-  const take = randNum(array().length - 1);
+  const take = getRandNum(array().length - 1);
 
   const question = () => {
     result[take] = '..';

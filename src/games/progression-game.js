@@ -3,23 +3,22 @@ import getRandNum from '../tools/randomnumbers.js';
 
 const task = 'What number is missing in the progression?';
 
+const makeProgression = (startNum, maxLength, step) => {
+  const numArr = [];
+  for (let minNum = 0; minNum <= 10; minNum += 1) {
+    numArr.push(startNum + minNum * step);
+  }
+  return numArr;
+};
+
 function game() {
-  let startNum = getRandNum(5);
+  const startNum = getRandNum(5);
   const step = 2;
-  const maxLength = 6 + getRandNum(4);
+  const maxLength = 10;
   const temp = startNum;
 
-  const array = () => {
-    const numArr = [];
-    for (let minNum = 0; minNum <= maxLength; minNum += 1) {
-      numArr.push(startNum);
-      startNum += step;
-    }
-    return numArr;
-  };
-
-  const result = array();
-  const take = getRandNum(array().length - 1);
+  const result = makeProgression(startNum, maxLength, step);
+  const take = getRandNum(makeProgression().length - 1);
 
   const question = () => {
     result[take] = '..';
@@ -30,5 +29,4 @@ function game() {
 
   return [question(), answer()];
 }
-const finn = play(task, game);
-export default finn;
+export default play(task, game);

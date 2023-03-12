@@ -18,4 +18,5 @@ function game() {
   const answer = isPrime(num) ? 'yes' : 'no';
   return [question, answer];
 }
-export default play(task, game);
+const result = () => play(task, game);
+export default result;

@@ -19,14 +19,10 @@ function game() {
 
   const result = makeProgression(startNum, maxLength, step);
   const take = getRandNum(makeProgression().length - 1);
-
-  const question = () => {
-    result[take] = '..';
-    return result.join(' ');
-  };
-
-  const answer = () => (temp + (step * take));
-
-  return [question(), answer()];
+  result[take] = '..';
+  const question = result.join(' ');
+  const answer = (temp + (step * take));
+  return [question, answer];
 }
-export default play(task, game);
+const res = () => play(task, game)
+export default res;

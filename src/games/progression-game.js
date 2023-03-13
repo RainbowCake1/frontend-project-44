@@ -24,5 +24,5 @@ function game() {
   const answer = (temp + (step * take));
   return [question, answer];
 }
-const res = () => play(task, game)
+const res = () => play(task, game);
 export default res;
